@@ -2,7 +2,6 @@
     "version": 2,
     "functions": {
       "api": {
-        "handler": "api/index.php",
         "runtime": "vercel-php@0.7.1",
         "includeFiles": ["api/*.php"]
       }
