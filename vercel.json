@@ -1,0 +1,24 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "public/index.php",
+        "use": "@vercel/php",
+        "config": {
+          "documentRoot": "public",
+          "routes": [
+            {
+              "src": "/(.*)",
+              "dest": "public/index.php"
+            }
+          ]
+        }
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "/public/index.php"
+      }
+    ]
+  }
