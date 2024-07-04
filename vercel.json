@@ -1,24 +1,10 @@
 {
     "version": 2,
-    "builds": [
-      {
-        "src": "public/index.php",
-        "use": "@vercel/php",
-        "config": {
-          "documentRoot": "public",
-          "routes": [
-            {
-              "src": "/(.*)",
-              "dest": "public/index.php"
-            }
-          ]
-        }
+    "functions": {
+      "api": {
+        "handler": "api/index.php",
+        "runtime": "vercel-php@0.7.1",
+        "includeFiles": ["api/*.php"]
       }
-    ],
-    "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "/public/index.php"
-      }
-    ]
+    }
   }
